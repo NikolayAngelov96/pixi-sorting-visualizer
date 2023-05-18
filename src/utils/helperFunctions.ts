@@ -12,3 +12,24 @@ export function resizeCanvas(app: Application) {
 
 	window.addEventListener("resize", resize);
 }
+
+export function getRandomNumber(min = 25, max = 400) {
+	return Math.floor(Math.random() * (max - min)) + min;
+}
+
+export function generateArray() {
+	const arr = [];
+
+	for(let i = 0; i < 10, i++; ) {
+		arr.push(getRandomNumber());
+	}
+
+	return arr;
+}
+
+export const colors = {
+  purple: 0x845EC2,
+  pink: 0xFF6F91,
+  blue: 0x0089BA,
+  green: 0x00C9A7,
+};
