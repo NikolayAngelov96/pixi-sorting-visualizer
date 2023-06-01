@@ -20,7 +20,7 @@ export function getRandomNumber(min = 25, max = 400) {
 export function generateArray() {
 	const arr = [];
 
-	for(let i = 0; i < 10, i++; ) {
+	for (let i = 0; i < 10; i++) {
 		arr.push(getRandomNumber());
 	}
 
@@ -28,8 +28,8 @@ export function generateArray() {
 }
 
 export const colors = {
-  purple: 0x845EC2,
-  pink: 0xFF6F91,
-  blue: 0x0089BA,
-  green: 0x00C9A7,
+	purple: 0x845EC2,
+	pink: 0xFF6F91,
+	blue: 0x0089BA,
+	green: 0x00C9A7,
 };
