@@ -1,5 +1,6 @@
-import { Application, Graphics } from "pixi.js";
-import { resizeCanvas } from "./utils/helperFunctions";
+import { Application } from "pixi.js";
+import { Bar } from "./Bar";
+import { generateArray, resizeCanvas } from "./utils/helperFunctions";
 
 export const APP_WIDTH = 800;
 export const APP_HEIGHT = 600;
@@ -14,10 +15,13 @@ document.body.appendChild(app.view as HTMLCanvasElement);
 
 resizeCanvas(app);
 
-const gr = new Graphics();
-gr.beginFill();
-gr.drawRect(200, 100, 100, 50);
-gr.endFill();
+const randomArray = generateArray();
 
-app.stage.addChild(gr);
+for (let i = 0; i < randomArray.length; i++) {
+	const height = randomArray[i];
 
+	const bar = new Bar(height);
+	bar.pivot.set(0, bar.height)
+	bar.position.set(i * 50 + 150, 590);
+	app.stage.addChild(bar);
+}
