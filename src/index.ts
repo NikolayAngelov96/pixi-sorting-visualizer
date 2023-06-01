@@ -1,6 +1,7 @@
 import { Application } from "pixi.js";
 import { resizeCanvas } from "./utils/helperFunctions";
 import { Visualizer } from "./components/Visualizer";
+import { Button } from "./components/Button";
 
 export const APP_WIDTH = 800;
 export const APP_HEIGHT = 600;
@@ -16,3 +17,8 @@ document.body.appendChild(app.view as HTMLCanvasElement);
 resizeCanvas(app);
 
 new Visualizer(app);
+
+const btn = new Button("test");
+
+btn.position.set(100, 20)
+app.stage.addChild(btn);
