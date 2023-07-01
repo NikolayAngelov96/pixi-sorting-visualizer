@@ -17,12 +17,3 @@ resizeCanvas(app);
 
 new Visualizer(app);
 
-const button = document.createElement("button");
-
-button.textContent = "Test";
-button.style.position = "absolute";
-button.style.top = "100px";
-button.style.left = "300px";
-
-document.body.appendChild(button);
-
